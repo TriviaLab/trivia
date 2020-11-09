@@ -1,15 +1,18 @@
 import json
+import random
 
-with open('countries.json', 'r') as f:
-    countries_dict = json.load(f)
+random_int = random.randint(1, 2)
+if random_int == 1:
 
-for countries in countries_dict:
-    print("Country: " + countries['country'] + "     City: " + countries['city'])
+    with open('countries.json', 'r') as f:
+        countries_dict = json.load(f)
 
-print('************************************************************************************************************')
+    for countries in countries_dict:
+        print("Country: " + countries['country'] + "     City: " + countries['city'])
 
-with open('states.json', 'r') as f:
-    states_dict = json.load(f)
+if random_int == 2:
+    with open('states.json', 'r') as f:
+        states_dict = json.load(f)
 
-for states in states_dict:
-    print("State: " + states['name'] + "     City: " + states['capital'])
+    for states in states_dict:
+        print("State: " + states['name'] + "     City: " + states['capital'])
