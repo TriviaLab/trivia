@@ -10,7 +10,6 @@ if random_int == 0:
             countries_dict = json.load(f)
             random_index = random.randint(0, len(countries_dict)-1)
             return countries_dict[random_index]['country']
-            #return countries_capital[random_index]['city']
             
     print("Which city is the capital of " + random_country() + "?")
     #print("The capital is " + random_country_capital())
